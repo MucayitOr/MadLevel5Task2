@@ -1,21 +1,20 @@
 package com.example.madlevel5task2.repository
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import com.example.madlevel5task2.dao.GameDao
 import com.example.madlevel5task2.database.GameRoomDatabase
 import com.example.madlevel5task2.model.Game
 
-
 class GameRepository(context: Context) {
-
-    private val gameDao: GameDao
+    private var gameDao: GameDao
 
     init {
-        val database = GameRoomDatabase.getDatabase(context)
-        gameDao = database!!.gameDao()
+        val gameRoomDatabase = GameRoomDatabase.getDatabase(context)
+        gameDao = gameRoomDatabase!!.gameDao()
     }
 
-    suspend fun getAllGames(): List<Game> {
+    fun getAllGames(): LiveData<List<Game>> {
         return gameDao.getAllGames()
     }
 
@@ -27,7 +26,7 @@ class GameRepository(context: Context) {
         gameDao.deleteGame(game)
     }
 
-    suspend fun deleteAllGames() {
+    suspend fun  deleteAllGames(){
         gameDao.deleteAllGames()
     }
 }

@@ -2,17 +2,14 @@ package com.example.madlevel5task2
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.madlevel5task2.databinding.FragmentAddGameBinding
 import com.example.madlevel5task2.model.Game
-import java.lang.NullPointerException
 import java.time.LocalDate
 
 /**

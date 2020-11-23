@@ -5,14 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.madlevel5task2.Converters
 import com.example.madlevel5task2.dao.GameDao
 import com.example.madlevel5task2.model.Game
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import java.util.*
 
 @Database(entities = [Game::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)

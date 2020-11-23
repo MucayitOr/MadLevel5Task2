@@ -8,12 +8,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.madlevel5task2.databinding.FragmentGameBacklogBinding
+import com.example.madlevel5task2.model.Game
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.example.madlevel5task2.databinding.FragmentGameBacklogBinding
-import com.example.madlevel5task2.model.Game
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
